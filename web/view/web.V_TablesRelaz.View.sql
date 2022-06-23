@@ -1,0 +1,24 @@
+﻿USE [RFID2022_OLD]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+CREATE View [web].[V_TablesRelaz] as 
+SELECT DISTINCT
+	tbl.TABLE_SCHEMA as TableSchema
+	, tbl.TABLE_NAME as TableName 	
+FROM INFORMATION_SCHEMA.TABLES AS tbl
+where tbl.TABLE_NAME like '%Relaz'
+
+
+
+
+
+
+
+
+GO
